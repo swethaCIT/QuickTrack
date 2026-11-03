@@ -2,12 +2,13 @@ import { useState } from 'react'
 
 function TaskForm({ onAddTask }) {
   const [title, setTitle] = useState('')
+  const [priority, setPriority] = useState('Medium')
 
   function handleSubmit(event) {
     event.preventDefault()
     const trimmedTitle = title.trim()
     if (!trimmedTitle) return
-    onAddTask(trimmedTitle)
+    onAddTask(trimmedTitle, priority)
     setTitle('')
   }
 
@@ -25,6 +26,17 @@ function TaskForm({ onAddTask }) {
         placeholder="What needs to get done?"
         maxLength={120}
       />
+      <label className="sr-only" htmlFor="task-priority">Task priority</label>
+      <select
+        id="task-priority"
+        className="priority-select"
+        value={priority}
+        onChange={(event) => setPriority(event.target.value)}
+      >
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
       <button className="add-button" type="submit">
         <span>Add task</span>
         <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>

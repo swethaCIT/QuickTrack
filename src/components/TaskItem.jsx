@@ -14,6 +14,9 @@ function TaskItem({ task, onToggle, onDelete }) {
         </span>
       </label>
       <span className="task-title">{task.title}</span>
+      <span className={`priority-pill priority-${(task.priority || 'Medium').toLowerCase()}`}>
+        {task.priority || 'Medium'}
+      </span>
       <span className={`status-pill ${task.completed ? 'completed' : 'pending'}`}>
         <span className="status-dot" />
         {task.completed ? 'Completed' : 'Pending'}
