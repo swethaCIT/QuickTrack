@@ -57,10 +57,8 @@ function App() {
         <section className="welcome-row">
           <div>
             <p className="eyebrow">YOUR WORKSPACE</p>
-<h1>
-  Good morning, Swetha — Task Status & Assignment Management
-  <span aria-hidden="true">✦</span>
-</h1>me-copy">Here’s what’s happening with your tasks today.</p>
+            <h1>Good morning, Swetha <span aria-hidden="true">✦</span></h1>
+            <p className="welcome-copy">Here’s what’s happening with your tasks today.</p>
           </div>
           <div className="date-chip">
             <span className="date-dot" />
