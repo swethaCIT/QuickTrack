@@ -14,7 +14,7 @@ function Navbar() {
 
         <div className="topbar-right">
           <span className="workspace-label">Personal workspace</span>
-          <button className="avatar" type="button" aria-label="Alex Morgan profile">AM</button>
+          <button className="avatar" type="button" aria-label="Swetha profile">SS</button>
         </div>
       </div>
     </header>

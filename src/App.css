@@ -321,6 +321,24 @@
   color: #aaacbb;
 }
 
+.priority-select {
+  flex: 0 0 auto;
+  height: 38px;
+  padding: 0 9px;
+  border: 1px solid #e8e9f1;
+  border-radius: 8px;
+  outline: 0;
+  color: #494b61;
+  background: #fff;
+  font-size: 12px;
+}
+
+.priority-select:focus-visible {
+  border-color: #b7b2f6;
+  outline: 3px solid rgba(92, 83, 232, 0.18);
+  outline-offset: 1px;
+}
+
 .add-button {
   display: inline-flex;
   flex: 0 0 auto;
@@ -491,6 +509,31 @@
   color: #a4a6b3;
   text-decoration: line-through;
   text-decoration-color: #c4c5cf;
+}
+
+.priority-pill {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.priority-pill.priority-high {
+  color: #c64d58;
+  background: #fff0f1;
+}
+
+.priority-pill.priority-medium {
+  color: #b17a2e;
+  background: #fff6e8;
+}
+
+.priority-pill.priority-low {
+  color: #43856b;
+  background: #eaf7f0;
 }
 
 .status-pill {
@@ -692,12 +735,17 @@
   }
 
   .task-item {
-    gap: 9px;
-    padding: 0 10px;
+    gap: 7px;
+    padding: 0 8px;
   }
 
   .task-title {
     font-size: 12px;
+  }
+
+  .priority-pill {
+    padding: 5px 6px;
+    font-size: 9px;
   }
 
   .status-pill {

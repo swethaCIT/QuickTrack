@@ -6,10 +6,10 @@ import TaskList from './components/TaskList.jsx'
 import FilterTabs from './components/FilterTabs.jsx'
 
 const initialTasks = [
-  { id: 1, title: 'Review the Q3 product roadmap', completed: false },
-  { id: 2, title: 'Send project updates to the team', completed: true },
-  { id: 3, title: 'Prepare notes for the design sync', completed: false },
-  { id: 4, title: 'Update the onboarding checklist', completed: false },
+  { id: 1, title: 'Review the Q3 product roadmap', completed: false, priority: 'Medium' },
+  { id: 2, title: 'Send project updates to the team', completed: true, priority: 'Medium' },
+  { id: 3, title: 'Prepare notes for the design sync', completed: false, priority: 'Medium' },
+  { id: 4, title: 'Update the onboarding checklist', completed: false, priority: 'Medium' },
 ]
 
 function App() {
@@ -31,9 +31,9 @@ function App() {
     return true
   })
 
-  function addTask(title) {
+  function addTask(title, priority) {
     setTasks((currentTasks) => [
-      { id: Date.now(), title, completed: false },
+      { id: Date.now(), title, completed: false, priority },
       ...currentTasks,
     ])
   }
@@ -57,7 +57,7 @@ function App() {
         <section className="welcome-row">
           <div>
             <p className="eyebrow">YOUR WORKSPACE</p>
-            <h1>Good morning, Alex <span aria-hidden="true">✦</span></h1>
+            <h1>Good morning, Swetha <span aria-hidden="true">✦</span></h1>
             <p className="welcome-copy">Here’s what’s happening with your tasks today.</p>
           </div>
           <div className="date-chip">
